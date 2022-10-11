@@ -16,20 +16,22 @@ function getBands()
     return $bands;
 }
 
-
-/*
 function getArtists()
 {
     $bdd = getBdd();
-    $artists = $bdd->query('SELECT *
+    $requete = $bdd->query('SELECT *
     FROM `artists`');
+    $artists = $requete->fetchAll(PDO::FETCH_OBJ);
+    $requete->closeCursor();
     return $artists;
 }
 
 function getAlbums()
 {
     $bdd = getBdd();
-    $albums = $bdd->query('SELECT *
+    $requete = $bdd->query('SELECT *
     FROM `albums`');
+    $albums = $requete->fetchAll(PDO::FETCH_OBJ);
+    $requete->closeCursor();
     return $albums;
-}*/
+}
