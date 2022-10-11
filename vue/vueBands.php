@@ -2,7 +2,13 @@
 <table>
     <?php foreach ($bands as $band): ?>
         <tr>
-            <td><?= $band->name?></td>
+        <td><img src="assets/images/logos/<?=$band->logo?>" width="300px"></td>
+            <td>
+                <b></b><?= $band->name?><br>
+                <b>Label : </b><?= $band->label?><br>
+                <b>Date de création : </b><?= $band->creation_year?>
+            </td>
+            
         </tr>
     <?php endforeach; ?>
 </table>
